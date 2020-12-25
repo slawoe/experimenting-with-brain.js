@@ -11,7 +11,7 @@ const trainingData = [
 
 neuralNetwork.train(trainingData, {
   log: (error) => console.log(error),
-  logPeroid: 100,
+  logPeriod: 100,
 });
 
 console.log(neuralNetwork.run([0, 0]));
