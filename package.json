@@ -1,0 +1,24 @@
+{
+  "name": "starting-w-brain.js",
+  "version": "1.0.0",
+  "description": "First steps with machine learning in brain.js",
+  "main": "index.js",
+  "dependencies": {
+    "brain.js": "^2.0.0-beta.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slawoe/starting-w-brain.js.git"
+  },
+  "keywords": [],
+  "author": "Slawomir Ernst",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slawoe/starting-w-brain.js/issues"
+  },
+  "homepage": "https://github.com/slawoe/starting-w-brain.js#readme"
+}
