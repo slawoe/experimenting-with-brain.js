@@ -9,7 +9,10 @@ const trainingData = [
   { input: [1, 1], output: [0] },
 ];
 
-neuralNetwork.train(trainingData);
+neuralNetwork.train(trainingData, {
+  log: (error) => console.log(error),
+  logPeroid: 100,
+});
 
 console.log(neuralNetwork.run([0, 0]));
 console.log(neuralNetwork.run([0, 1]));
