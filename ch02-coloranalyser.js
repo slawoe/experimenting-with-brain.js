@@ -1,5 +1,7 @@
 //Working with objects in Neural Networks
 
+const brain = require("brain.js");
+
 const colors = [
   { green: 0.2, blue: 0.4 },
   { green: 0.4, blue: 0.6 },
@@ -38,3 +40,14 @@ for (let i = 0; i < colors.length; i++) {
     output: brightnesses[i],
   });
 }
+
+const neuralNetwork = new brain.NeuralNetwork({ hiddenLayers: [3] });
+
+const stats = neuralNetwork.train(trainingData);
+
+console.log(stats);
+console.log(
+  neuralNetwork.run({
+    red: 0.9,
+  })
+);
