@@ -1,3 +1,5 @@
+const brain = require("brain.js");
+
 const restaurants = {
   "Brilliant Yellow Corral": "Monday",
   "Penny’s": "Tuesday",
@@ -18,4 +20,9 @@ for (let restaurantName in restaurants) {
   });
 }
 
-console.log(trainingData);
+const neuralNetwork = new brain.NeuralNetwork({ hiddenLayers: [3] });
+
+const stats = neuralNetwork.train(trainingData);
+
+console.log(stats);
+console.log(neuralNetwork.run({ Sunday: 1 }));
