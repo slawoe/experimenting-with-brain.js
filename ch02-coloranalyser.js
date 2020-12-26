@@ -51,3 +51,25 @@ console.log(
     red: 0.9,
   })
 );
+
+// Invertion of input output
+
+const invertedTrainingData = [];
+
+for (let i = 0; i < colors.length; i++) {
+  invertedTrainingData.push({
+    input: brightnesses[i],
+    output: colors[i],
+  });
+}
+
+const invertedNeuralNetwork = new brain.NeuralNetwork({ hiddenLayers: [3] });
+
+const invertedStats = invertedNeuralNetwork.train(invertedTrainingData);
+
+console.log(invertedStats);
+console.log(
+  invertedNeuralNetwork.run({
+    dark: 0.9,
+  })
+);
