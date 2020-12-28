@@ -320,5 +320,7 @@ const neuralNetwork = new brain.recurrent.LSTMTimeStep({
 neuralNetwork.train(trainingData, {
   learningRate: 0.005,
   errorThresh: 0.02,
-  log: (stats) => console.log(stats),
+  // log: (stats) => console.log(stats),
 });
+
+console.log(scaleUp(neuralNetwork.run(trainingData[0])));
