@@ -1,3 +1,5 @@
+const brain = require("brain.js");
+
 const rawData = [
   {
     date: "2018-11-02",
@@ -309,4 +311,8 @@ const trainingData = [
   scaledData.slice(15, 20),
 ];
 
-console.log(trainingData);
+const neuralNetwork = new brain.recurrent.LSTMTimeStep({
+  inputSize: 4,
+  hiddenLayers: [8, 8],
+  outputSize: 4,
+});
