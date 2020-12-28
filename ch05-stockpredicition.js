@@ -301,5 +301,12 @@ function scaleUp(step) {
   };
 }
 
-console.log(scaleDown(rawData[0]));
-console.log(scaleUp(scaleDown(rawData[0])));
+const scaledData = rawData.map(scaleDown);
+const trainingData = [
+  scaledData.slice(0, 5),
+  scaledData.slice(5, 10),
+  scaledData.slice(10, 15),
+  scaledData.slice(15, 20),
+];
+
+console.log(trainingData);
