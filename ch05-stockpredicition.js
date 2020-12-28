@@ -316,3 +316,9 @@ const neuralNetwork = new brain.recurrent.LSTMTimeStep({
   hiddenLayers: [8, 8],
   outputSize: 4,
 });
+
+neuralNetwork.train(trainingData, {
+  learningRate: 0.005,
+  errorThresh: 0.02,
+  log: (stats) => console.log(stats),
+});
