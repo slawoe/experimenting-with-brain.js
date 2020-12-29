@@ -1,3 +1,5 @@
+const brain = require("brain.js");
+
 const trainingData = [
   "0+0=0",
   "0+1=1",
@@ -41,3 +43,5 @@ const trainingData = [
   "5+4=9",
   "5+5=10",
 ];
+
+const neuralnetwork = new brain.recurrent.LSTM({ hiddenLayers: [20] });
