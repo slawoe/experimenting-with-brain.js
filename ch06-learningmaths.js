@@ -50,3 +50,7 @@ neuralNetwork.train(trainingData, {
   errorThresh: 0.025,
   log: (stats) => console.log(stats),
 });
+
+console.log(neuralNetwork.run("3+2="));
+console.log(neuralNetwork.run("5+4="));
+console.log(neuralNetwork.run("1+1="));
