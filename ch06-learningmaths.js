@@ -44,4 +44,9 @@ const trainingData = [
   "5+5=10",
 ];
 
-const neuralnetwork = new brain.recurrent.LSTM({ hiddenLayers: [20] });
+const neuralNetwork = new brain.recurrent.LSTM({ hiddenLayers: [20] });
+
+neuralNetwork.train(trainingData, {
+  errorThresh: 0.025,
+  log: (stats) => console.log(stats),
+});
