@@ -115,9 +115,9 @@ const trainingData = [
 
 const neuralNetwork = new brain.NeuralNetwork();
 
-neuralNetwork.train(trainingData, { log: (stats) => console.log(stats) });
+neuralNetwork.train(trainingData);
 
-const result = neuralNetwork.run(
+const result = brain.likely(
   toArray(
     "#######" +
       "#     #" +
@@ -126,7 +126,8 @@ const result = neuralNetwork.run(
       "#     #" +
       "#     #" +
       "#######"
-  )
+  ),
+  neuralNetwork
 );
 
 console.log(result);
