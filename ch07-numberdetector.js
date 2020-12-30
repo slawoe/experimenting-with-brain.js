@@ -117,17 +117,74 @@ const neuralNetwork = new brain.NeuralNetwork();
 
 neuralNetwork.train(trainingData);
 
+//nine
 const result = brain.likely(
   toArray(
     "#######" +
       "#     #" +
       "#     #" +
-      "#######" +
-      "#     #" +
-      "#     #" +
-      "#######"
+      "###### " +
+      "    #  " +
+      "   #   " +
+      " #     "
   ),
   neuralNetwork
 );
 
-console.log(result);
+//damaged nine!
+const result2 = brain.likely(
+  toArray(
+    "# ### #" +
+      "#     #" +
+      "#      " +
+      "# ###  " +
+      "    #  " +
+      "       " +
+      " #     "
+  ),
+  neuralNetwork
+);
+
+//four
+const result3 = brain.likely(
+  toArray(
+    "#     #" +
+      "#     #" +
+      "#     #" +
+      "#######" +
+      "      #" +
+      "      #" +
+      "      #"
+  ),
+  neuralNetwork
+);
+
+//damaged four!
+const result4 = brain.likely(
+  toArray(
+    "      #" +
+      "#      " +
+      "      #" +
+      "# ## ##" +
+      "      #" +
+      "       " +
+      "      #"
+  ),
+  neuralNetwork
+);
+
+//not a number!
+const result5 = brain.likely(
+  toArray(
+    "#  #  #" +
+      "#  #  #" +
+      "#  #  #" +
+      "#  #  #" +
+      "#  #  #" +
+      "#  #  #" +
+      "#  #  #"
+  ),
+  neuralNetwork
+);
+
+console.log(result, result2, result3, result4, result5);
