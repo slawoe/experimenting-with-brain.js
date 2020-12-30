@@ -1,3 +1,5 @@
+const brain = require("brain.js");
+
 const zero = toArray(
   "#######" +
     "#     #" +
@@ -97,3 +99,5 @@ function toArray(string) {
   if (string.length !== 7 * 7) throw new Error("String has a wrong size");
   return string.split("").map(toNumber);
 }
+
+const neuralNetwork = new brain.NeuralNetwork();
