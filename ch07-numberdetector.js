@@ -88,3 +88,7 @@ const nine = toArray(
     "   #   " +
     " #     "
 );
+
+function toNumber(character) {
+  return character === "#" ? 1 : 0;
+}
