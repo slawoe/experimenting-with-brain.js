@@ -114,3 +114,19 @@ const trainingData = [
 ];
 
 const neuralNetwork = new brain.NeuralNetwork();
+
+neuralNetwork.train(trainingData, { log: (stats) => console.log(stats) });
+
+const result = neuralNetwork.run(
+  toArray(
+    "#######" +
+      "#     #" +
+      "#     #" +
+      "#######" +
+      "#     #" +
+      "#     #" +
+      "#######"
+  )
+);
+
+console.log(result);
