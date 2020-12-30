@@ -92,3 +92,8 @@ const nine = toArray(
 function toNumber(character) {
   return character === "#" ? 1 : 0;
 }
+
+function toArray(string) {
+  if (string.length !== 7 * 7) throw new Error("String has a wrong size");
+  return string.split("").map(toNumber);
+}
