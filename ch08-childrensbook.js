@@ -8,3 +8,11 @@ const trainingData = [
 ];
 
 const neuralNetwork = new brain.recurrent.LSTM();
+
+neuralNetwork.train(trainingData, {
+  iterations: 1500,
+  errorThresh: 0.011,
+});
+
+console.log(`result for "Doug": ${neuralNetwork.run("Doug")}`);
+console.log(`result for "at": ${neuralNetwork.run("at")}`);
