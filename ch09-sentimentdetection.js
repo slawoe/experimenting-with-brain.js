@@ -10,7 +10,10 @@ const trainingData = [
 const neuralNetwork = new brain.recurrent.LSTM();
 
 neuralNetwork.train(trainingData, {
-  iterations: 150,
-  errorThresh: 0.011,
+  iterations: 300,
+  errorThresh: 0.0105,
   log: (stats) => console.log(stats),
 });
+
+console.log(neuralNetwork.run("I am super unhappy!"));
+console.log("Test");
