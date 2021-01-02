@@ -10,3 +10,8 @@ const trainingData = [
 const neuralNetwork = new brain.NeuralNetwork({ hiddenLayers: [3] });
 
 neuralNetwork.train(trainingData, { log: (stats) => console.log(stats) });
+
+console.log(neuralNetwork.run([0, 0]));
+console.log(neuralNetwork.run([0, 1]));
+console.log(neuralNetwork.run([1, 0]));
+console.log(neuralNetwork.run([1, 1]));
