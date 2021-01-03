@@ -10,4 +10,7 @@ const trainingData = [
 
 const neuralNetwork = new brain.NeuralNetwork();
 
-neuralNetwork.train(trainingData, { log: (stats) => console.log(stats) });
+neuralNetwork.train(trainingData);
+
+console.log(neuralNetwork.run({ blue: 1 }));
+console.log(neuralNetwork.run({ brown: 1 }));
