@@ -10,8 +10,7 @@ const trainingData = [
 const neuralNetwork = new brain.recurrent.LSTM();
 
 neuralNetwork.train(trainingData, {
-  iterations: 100,
-  errorThresh: 0.011,
+  iterations: 1000,
 });
 
 console.log(neuralNetwork.run("Have a great 2021!"));
